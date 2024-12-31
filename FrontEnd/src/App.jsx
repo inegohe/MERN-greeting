@@ -59,7 +59,7 @@ function App() {
           {user ? (
             <button
               onClick={() => {
-                window.location.href = `whatsapp://send?text=Have%20you%20seen%20this??%0A*${name}*%20sent%20you%20a%20suprise%20message%0A*Tap%20here!*%20www.greeting.com/${name}`;
+                window.location.href = `whatsapp://send?text=😳%20Have%20you%20seen%20this??%0A*${name}*%20sent%20you%20a%20suprise%20message%20🥰%0A*Tap%20here!%0A👇%20👇%0A*%20www.greeting.com/${name}`;
               }}
               >
               Share with Friends
