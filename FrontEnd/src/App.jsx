@@ -66,7 +66,7 @@ function App() {
             <>
               <input
                 className="element-input"
-                placeholder="Enter your Name here..."
+                placeholder="👉Enter your Name here..."
                 onChange={(e) => setNewName(e.target.value.toUpperCase())}
               />
               <Link to={"/" + newName}>
@@ -76,7 +76,7 @@ function App() {
                   setUser(true)
                   setName(newName)
                   }}>
-                  GO
+                  👉GO
                 </button>
               </Link>
             </>
