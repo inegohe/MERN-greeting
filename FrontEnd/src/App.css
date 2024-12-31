@@ -4,11 +4,27 @@
   width: 100vw;
 }
 
+@keyframes zoom-input {
+  from { scale: 0.9;}
+  to { scale: 1.1;}  
+}
+
+@keyframes move-button {
+  from { transform: translateX(-10%);}
+  to { transform: translateX(10%);}  
+}
+
 .element-button {
+  background-color: rgb(0, 184, 31);
   height: auto;
   font-size: 1.5em;
   text-align: center;
   padding: 5px;
+  margin-left: 10px;
+  border-radius: 1rem;
+  animation-name: move-button;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .element-input {
@@ -16,9 +32,17 @@
   font-size: 1.5em;
   text-align: center;
   padding: 5px;
-  border-radius: 999rem;
+  box-shadow: 1px 0 0 rgb(0, 184, 31), 0 1px 0 rgb(0, 184, 31), -1px 0 0 rgb(98, 184, 0), 0 -1px 0 rgb(98, 184, 0);
+  border-radius: 1rem;
   border: none;
-  /* background: linear-gradient(21deg, #10abff, #1beabd); */
+  background: linear-gradient(21deg, #2c2c2c, #535353);
+  animation-name: zoom-input;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.element-input:focus {
+  animation-duration: 0s;
 }
 
 @keyframes zoom {
@@ -85,11 +109,12 @@
 
 .input {
   display: flex;
+  width: 100vw;
   position: fixed;
   bottom: 20px;
   left: 50%;
   z-index: 5;
-  transform: translateX(-50%);
+  transform: translateX(-35%);
 }
 
 .wish-sec-container {
