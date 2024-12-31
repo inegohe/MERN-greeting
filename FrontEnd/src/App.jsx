@@ -3,8 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { useWindowSize } from 'react-use';
 import Confetti from 'react-confetti';
 import "./App.css";
-import newYear from "./../public/newyear.webp";
-import year from "./../public/2025.webp";
+import newYear from "/newyear.webp";
+import year from "/2025.webp";
 import { useGlobalContext } from "./Context/GlobalProvider";
 
 function App() {
@@ -23,6 +23,8 @@ function App() {
 
   return (
     <>
+    <div className='wrapper'>
+
       <div className="container">
         <Confetti
         width={width}
@@ -59,7 +61,7 @@ function App() {
               onClick={() => {
                 window.location.href = "whatsapp://send?text=hey&there!";
               }}
-            >
+              >
               Share with Friends
             </button>
           ) : (
@@ -83,6 +85,7 @@ function App() {
           )}
         </div>
       </div>
+                </div>
     </>
   );
 }

@@ -4,6 +4,11 @@
   width: 100vw;
 }
 
+.wrapper {
+  position: relative;
+  width: 100vw;
+}
+
 @keyframes zoom-input {
   from { scale: 0.9;}
   to { scale: 1.1;}  
@@ -29,7 +34,7 @@
 
 .element-input {
   height: auto;
-  font-size: 1.5em;
+  font-size: 20px;
   text-align: center;
   padding: 5px;
   box-shadow: 1px 0 0 rgb(0, 184, 31), 0 1px 0 rgb(0, 184, 31), -1px 0 0 rgb(98, 184, 0), 0 -1px 0 rgb(98, 184, 0);
@@ -48,6 +53,11 @@
 @keyframes zoom {
   0% { scale: 0.8;}
   100% { scale: 1;}
+}
+
+@keyframes zoom-newyear {
+  0% { scale: 0.8;   transform: translateX(-60%);}
+  100% { scale: 1;   transform: translateX(-50%);}
 }
 
 @keyframes rainbow {
@@ -75,17 +85,18 @@
 }
 
 .new-year {
-  position: relative;
+  position: absolute;
   z-index: 10;
   top: 120px;
-  margin-top: -100px;
-  animation-name: zoom;
+  left: 50%;
+  margin-top: -60px;
+  animation-name: zoom-newyear;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
 .year-digits {
-
+  margin-top: 180px;
 }
 
 @keyframes colors {
@@ -108,19 +119,19 @@
 }
 
 .input {
-  display: flex;
-  width: 100vw;
   position: fixed;
-  bottom: 20px;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  top: 90vh;
+  left: 0px;
   z-index: 5;
-  transform: translateX(-35%);
 }
 
 .wish-sec-container {
   display: inline-block;
   overflow: hidden;
-  width: 30rem;
+  width: 80vw;
 }
 
 .wish-sec {
