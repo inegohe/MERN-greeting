@@ -16,9 +16,8 @@ function App() {
 
   useEffect(() => {
     if (params.name) {
-      setName(params.name);
+      setName(params.name.charAt(0).toUpperCase() + params.name.slice(1));
     }
-    console.log(user);
   }, []);
 
   return (
@@ -44,10 +43,11 @@ function App() {
         <img className="year-digits" src={year} width="250rem" />
       </div>
       <div className="container">
-        <div className="wish">May You have a prosperous New Year</div>
+        <div className="wish">May You have 
+          a prosperous New Year</div>
       </div>
       <div className="container">
-        <div className="greet-sec">!!hAPPY nEW yEAR 2025!!</div>
+        <div className="greet-sec">!!HAPPY NEW YEAR 2025!!</div>
       </div>
       <div className="container">
         <div className="wish-sec-container">
@@ -58,8 +58,9 @@ function App() {
         <div className="input">
           {user ? (
             <button
+            className="element-button-sec"
               onClick={() => {
-                window.location.href = `whatsapp://send?text=😳%20Have%20you%20seen%20this??%0A*${name}*%20sent%20you%20a%20suprise%20message%20🥰%0A*Tap%20here!%0A👇%20👇%0A*%20www.greeting.com/${name}`;
+                window.location.href = `whatsapp://send?text=😳%20Have%20you%20seen%20this??%0A*${name.replace(' ','')}*%20sent%20you%20a%20suprise%20message%20🥰%0A*Tap%20here!*%0A👇%20👇%0Awww.greeting.com/${name.replace(' ','')}`;
               }}
               >
               Share with Friends
@@ -69,14 +70,14 @@ function App() {
               <input
                 className="element-input"
                 placeholder="👉Enter your Name here..."
-                onChange={(e) => setNewName(e.target.value.toUpperCase())}
+                onChange={(e) => setNewName(e.target.value.toLowerCase())}
               />
               <Link to={"/" + newName}>
                 <button 
                 className="element-button" 
                 onClick={() => {
                   setUser(true)
-                  setName(newName)
+                  setName(newName.charAt(0).toUpperCase() + newName.slice(1))
                   }}>
                   👉GO
                 </button>
