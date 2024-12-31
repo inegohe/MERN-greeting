@@ -60,7 +60,7 @@ function App() {
             <button
             className="element-button-sec"
               onClick={() => {
-                window.location.href = `whatsapp://send?text=😳%20Have%20you%20seen%20this??%0A*${name.replace(' ','')}*%20sent%20you%20a%20suprise%20message%20🥰%0A*Tap%20here!*%0A👇%20👇%0Awww.greeting.com/${name.replace(' ','')}`;
+                window.location.href = `whatsapp://send?text=😳%20Have%20you%20seen%20this??%0A*${name.replace(' ','')}*%20sent%20you%20a%20suprise%20message%20🥰%0A*Tap%20here!*%0A👇%20👇%0Ahttps://new-year-suprise.onrender.com/${name.replace(' ','')}`;
               }}
               >
               Share with Friends
