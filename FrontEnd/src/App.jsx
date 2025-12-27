@@ -4,7 +4,7 @@ import { useWindowSize } from 'react-use';
 import Confetti from 'react-confetti';
 import "./App.css";
 import newYear from "/newyear.webp";
-import year from "../dist/2026.webp";
+import year from "/2026.webp";
 import { useGlobalContext } from "./Context/GlobalProvider";
 
 function useVisualViewportSize() {
