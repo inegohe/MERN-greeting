@@ -7,8 +7,34 @@ import newYear from "/newyear.webp";
 import year from "../dist/2026.webp";
 import { useGlobalContext } from "./Context/GlobalProvider";
 
+function useVisualViewportSize() {
+  const [size, setSize] = useState({
+    width: window.VisualViewport?.width || window.innerWidth,
+    height: window.VisualViewport?.height || window.innerHeight,
+  })
+
+  useEffect(() => {
+    const update = () => {
+      setSize({
+        width:window.VisualViewport?.width || window.innerWidth,
+        height: window.VisualViewport?.height || window.innerHeight,
+      })
+    }
+
+    window.VisualViewport?.addEventListener("resize", update)
+    window.addEventListener("resize", update)
+
+    return () => {
+      window.VisualViewport?.removeEventListener("resize", update)
+      window.removeEventListener("resize", update)
+    }
+  }, [])
+
+  return size
+}
+
 function App() {
-  const { width, height } = useWindowSize()
+  const { width, height } = useVisualViewportSize();
   const { user, setUser } = useGlobalContext();
   const params = useParams();
   const [name, setName] = useState("");
@@ -28,6 +54,8 @@ function App() {
         <Confetti
         width={width}
         height={height}
+        recycle={true}
+        numberOfPieces={200}
         />
       </div>
       <div className="container">
