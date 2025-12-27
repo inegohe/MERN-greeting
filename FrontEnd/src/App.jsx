@@ -68,7 +68,7 @@ function App() {
         <img className="new-year" src={newYear} width="450rem" />
       </div>
       <div className="container">
-        <img className="year-digits" src={/2026.webp} width="250rem" />
+        <img className="year-digits" src={"/2026.webp"} width="250rem" />
       </div>
       <div className="container">
         <div className="wish">May You have 
