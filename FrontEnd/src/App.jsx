@@ -4,7 +4,7 @@ import { useWindowSize } from 'react-use';
 import Confetti from 'react-confetti';
 import "./App.css";
 import newYear from "/newyear.webp";
-import year from "/2025.webp";
+import year from "../dist/2026.webp";
 import { useGlobalContext } from "./Context/GlobalProvider";
 
 function App() {
@@ -47,11 +47,11 @@ function App() {
           a prosperous New Year</div>
       </div>
       <div className="container">
-        <div className="greet-sec">!!HAPPY NEW YEAR 2025!!</div>
+        <div className="greet-sec">!!HAPPY NEW YEAR 2026!!</div>
       </div>
       <div className="container">
         <div className="wish-sec-container">
-        <div className="wish-sec">{`"${name} wishes you a happy new year 2025"`}</div>
+        <div className="wish-sec">{`"${name} wishes you a happy new year 2026"`}</div>
         </div>
       </div>
       <div className="container">
