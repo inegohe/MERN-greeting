@@ -9,7 +9,7 @@ createRoot(document.getElementById("root")).render(
   <GlobalProvider>
   <BrowserRouter>
     <Routes>
-      <Route path="/:name" element={<App />} />
+      <Route path="/:name?" element={<App />} />
     </Routes>
   </BrowserRouter>
   </GlobalProvider>
