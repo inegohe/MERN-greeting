@@ -4,7 +4,7 @@ import { useWindowSize } from 'react-use';
 import Confetti from 'react-confetti';
 import "./App.css";
 import newYear from "/newyear.webp";
-import year from "/2026.webp";
+//import year from "/2026.webp";
 import { useGlobalContext } from "./Context/GlobalProvider";
 
 function useVisualViewportSize() {
@@ -68,7 +68,7 @@ function App() {
         <img className="new-year" src={newYear} width="450rem" />
       </div>
       <div className="container">
-        <img className="year-digits" src={year} width="250rem" />
+        <img className="year-digits" src={"/2026.webp"} width="250rem" />
       </div>
       <div className="container">
         <div className="wish">May You have 
