@@ -4,6 +4,18 @@
   width: 100vw;
 }
 
+.display {
+  text-align: center;
+  font-size: medium;
+  width: 100vw;
+}
+
+.overlay {
+  text-align: center;
+  font-size: medium;
+  width: 100vw;
+}
+
 .wrapper {
   position: relative;
   width: 100vw;

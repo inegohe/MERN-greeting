@@ -21,11 +21,11 @@ function useVisualViewportSize() {
       })
     }
 
-    window.VisualViewport?.addEventListener("resize", update)
+    //window.VisualViewport?.addEventListener("resize", update)
     window.addEventListener("resize", update)
 
     return () => {
-      window.VisualViewport?.removeEventListener("resize", update)
+      //window.VisualViewport?.removeEventListener("resize", update)
       window.removeEventListener("resize", update)
     }
   }, [])
